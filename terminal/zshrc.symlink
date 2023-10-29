@@ -17,15 +17,12 @@ fi
 
 ZSH="$HOME/.oh-my-zsh"
 
-# temporary
-plugins=(
-  git
-  z
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  docker-compose
-  kubectl
-)
+# configure plugins
+plugins=("${(@f)$(
+find $DOTFILES_DIR -maxdepth 1 -not -name '.git' -type d -exec basename {} \; | awk -v zsh=${ZSH} '{print zsh"/plugins/"$1}' | xargs ls -d 2>/dev/null | xargs -n 1 basename | sort | uniq
+
+find $DOTFILES_DIR -maxdepth 2 -name oh-my-zsh.plugins -exec cat {} \; -exec echo \;
+)}")
 
 # configure stuff before we launch oh-my-zsh
 for file in ${(M)config_files:#*/oh-my-zsh.zsh}
