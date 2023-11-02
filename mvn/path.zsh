@@ -1,1 +1,1 @@
-export PATH=/opt/maven/bin:${PATH}
+# export PATH=/opt/maven/bin:${PATH}
