@@ -9,7 +9,7 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
         count   = !git shortlog -sn
-        wip     = !git --add all && git commit -m "WIP"
+        wip     = !git add --all && git commit -m "WIP"
 [color]
         diff = auto
         status = auto
