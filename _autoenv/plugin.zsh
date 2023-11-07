@@ -90,7 +90,7 @@ ve() {
 	  if [ -z "${VIRTUAL_ENV}" ]; then
         if [ ! -d ${venv} ]; then
             echo "Creating and activating virtual environment ${venv}"
-            ${py} -m venv ${venv} --system-site-package
+            ${py} -m venv ${venv} #--system-site-package
             # echo "export PYTHON=${py}" >> ${bin}    # overwrite ${python} on .zshenv
             source ${bin}
             echo "Upgrading pip"
