@@ -1,5 +1,1 @@
-function _shake {
-    compadd $(./Shakefile _targets)
-}
-
-compdef _shake shake
+complete -W "$(./Shakefile _targets)" shake
