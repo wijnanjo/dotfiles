@@ -30,7 +30,9 @@ fail () {
 setup_gitconfig () {
   if ! [ -f git/gitconfig.local.symlink ]
   then
-    info 'setup gitconfig'
+    user 'Setup gitconfig (y/n)?'
+    read -n 1 YN
+    [[ "$YN" == "y" ]] || return 0
 
     git_credential='cache'
     if [ "$(uname -s)" == "Darwin" ]
