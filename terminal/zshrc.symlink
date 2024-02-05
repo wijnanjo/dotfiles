@@ -58,3 +58,4 @@ do
 done
 
 unset config_files
+if [ -e /home/jo/.nix-profile/etc/profile.d/nix.sh ]; then . /home/jo/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

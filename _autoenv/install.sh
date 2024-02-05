@@ -1,1 +1,0 @@
-[ -d $HOME/.autoenv ] || git clone https://github.com/hyperupcall/autoenv $HOME/.autoenv
