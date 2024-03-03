@@ -8,5 +8,6 @@ function prompt_streamplatformenv(){
 
  : "${SPF_HOME:=$HOME/code/coz/streamplatform}"
 
- alias spf-dev="source $SPF_HOME/manage/scripts/activate-dev"
- alias spf-test="source $SPF_HOME/manage/scripts/activate-test"
+ alias spf-local="source $SPF_HOME/devenv/activate-local"
+ alias spf-dev="source $SPF_HOME/devenv/activate-dev"
+ alias spf-test="source $SPF_HOME/devenv/activate-test"
