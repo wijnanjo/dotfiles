@@ -1,6 +1,6 @@
 function prompt_streamplatformenv(){
   [[ -n ${SPF_CONTEXT} ]] || return
-  p10k segment -s SPF -f blue -t "[${SPF_CONTEXT}]"
+  p10k segment -s SPF -f 220 -t "[${SPF_CONTEXT}]"
  }
 
  # disables prompt mangling in activatecontext.sh
